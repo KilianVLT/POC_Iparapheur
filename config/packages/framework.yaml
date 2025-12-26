@@ -4,6 +4,10 @@ framework:
 
     # Note that the session will be started ONLY if you read or write from it.
     session: true
+    http_client:
+        scoped_clients:
+            iparapheur.client: # Garder ce nommage pour les autres services (.client utilisé pour la config par la suite)
+                base_uri: '%env(IPARAPHEUR_API_URL)%'
 
     #esi: true
     #fragments: true
