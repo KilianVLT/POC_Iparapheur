@@ -10,6 +10,8 @@ services:
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        bind:
+            $tempDir: '%kernel.project_dir%/var/tmp/xml'
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
@@ -23,3 +25,4 @@ services:
         arguments:
             $iparapheurApiUsername: '%env(IPARAPHEUR_API_USERNAME)%'
             $iparapheurApiPassword: '%env(IPARAPHEUR_API_PASSWORD)%'
+

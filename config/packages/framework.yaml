@@ -8,6 +8,8 @@ framework:
         scoped_clients:
             iparapheur.client: # Garder ce nommage pour les autres services (.client utilisé pour la config par la suite)
                 base_uri: '%env(IPARAPHEUR_API_URL)%'
+            kiosque.client:
+                base_uri: '%env(KIOSQUE_API_URL)%'
 
     #esi: true
     #fragments: true
